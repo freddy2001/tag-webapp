@@ -63,10 +63,10 @@ body.custom-background { background-color: #e0e0e0; background-image: url('banne
 <li id="menu-item-328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-328"><a href="#">Mein Profil<svg version="1.1" aria-labelledby="icon-arrow-title icon-arrow-desc" class="penguin-icon-dropdown" role="img"><title id="icon-arrow-title">Pfeil nach unten</title><desc id="icon-arrow-desc">Icon symbolisiert ein bestehendes Untermenü</desc><use xlink:href="http://www.mkg-technik-ag.de/wp-content/themes/penguin/icons.svg#penguin-icon-dropdown"></use></svg></a>
 <ul class="sub-menu">
 	<li id="menu-item-412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-412"><a href="?action=logout" target="main">Logout</a></li>
-	<li id="menu-item-792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792"><a href="http://www.mkg-technik-ag.de/?page_id=790" target="main">Bearbeiten</a></li>
+	<li id="menu-item-792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792"><a href="" target="main">Bearbeiten</a></li>
 </ul>
 </li>
-<li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-objecty-page menu-item-339"><a href="http://www.mkg-technik-ag.de/?page_id=337" target="main">Mitglieder</a></li>
+<li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-objecty-page menu-item-339"><a href="" target="main">Mitglieder</a></li>
 <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="?action=about">Über</a></li>
 </ul></div>	</div>
 </nav>	
