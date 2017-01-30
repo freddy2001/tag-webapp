@@ -1,3 +1,4 @@
 [submodule "piwik"]
 	path = piwik
 	url = https://github.com/piwik/piwik.git
+	branch = 2.10.0
