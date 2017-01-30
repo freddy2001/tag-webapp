@@ -53,13 +53,13 @@ body.custom-background { background-color: #e0e0e0; background-image: url('banne
 		
 <nav id="site-navigation" class="main-navigation clear" role="navigation">
 	<div class="container">
-		<p class="site-title"><a href="http://www.mkg-technik-ag.de/" rel="home">MKG-Technik-AG</a></p>		<svg version="1.1" aria-labelledby="icon-menu-title icon-menu-desc" class="menu-toggle penguin-icon-menu" role="img">
+		<p class="site-title"><a href="http://www.mkg-technik-ag.de/" target="_blank">MKG-Technik-AG</a></p>		<svg version="1.1" aria-labelledby="icon-menu-title icon-menu-desc" class="menu-toggle penguin-icon-menu" role="img">
 			<title id="icon-menu-title"></title>
 			<desc id="icon-menu-desc"></desc>
 			<use xlink:href="http://www.mkg-technik-ag.de/wp-content/themes/penguin/icons.svg#penguin-icon-menu"></use>
 		</svg>
 		<a class="skip-link screen-reader-text" href="#content">Zum Inhalt</a>
-		<div class="menu-bilder-container"><ul id="menu-bilder" class="main-menu"><li id="menu-item-609" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-609"><a href="/tag">Startseite</a></li>
+		<div class="menu-bilder-container"><ul id="menu-bilder" class="main-menu"><li id="menu-item-609" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-609"><a href="/webapp">Startseite</a></li>
 <li id="menu-item-328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-328"><a href="#">Mein Profil<svg version="1.1" aria-labelledby="icon-arrow-title icon-arrow-desc" class="penguin-icon-dropdown" role="img"><title id="icon-arrow-title">Pfeil nach unten</title><desc id="icon-arrow-desc">Icon symbolisiert ein bestehendes Untermenü</desc><use xlink:href="http://www.mkg-technik-ag.de/wp-content/themes/penguin/icons.svg#penguin-icon-dropdown"></use></svg></a>
 <ul class="sub-menu">
 	<li id="menu-item-412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-412"><a href="?action=logout" target="main">Logout</a></li>
