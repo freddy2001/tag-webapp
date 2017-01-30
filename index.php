@@ -265,5 +265,9 @@ class index extends Core {
 }
 $index = new index();
 
-echo shell_exec("cd /var/www/test_html/tag-webapp && /usr/bin/git pull 2>&1");
+$1 = shell_exec("cd /var/www/test_html/tag-webapp && /usr/bin/git pull 2>&1");
+if($1 != "Already up-to-date.") {
+	echo "<span style='text-size:5px;'>Git error: <br>$1</span>";
+}
+
 ?>
