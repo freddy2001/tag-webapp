@@ -1,3 +1,3 @@
 <?php
-shell_exec("./getfromgit.sh");
+echo shell_exec("./getfromgit.sh");
 ?>
