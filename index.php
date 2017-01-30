@@ -150,13 +150,13 @@ class index extends Core {
 		while(isset($posts['posts'][$i])) {
 			$date = substr($posts['posts'][$i]['date'], 0, 10) . " um" . substr($posts['posts'][$i]['date'], 10);
 			$postcontentdiv .= "<div class='post' id='post" . $posts['posts'][$i]['id'] . "'><a href='?view=profile&username=" . $posts['posts'][$i]['username'] . "'>" . $posts['posts'][$i]['vorname'] . " " . $posts['posts'][$i]['nachname'] . "</a> schrieb am " . $date . ":<br />" .  $posts['posts'][$i]['postcontent'];
-			$postcontentdiv .= "<div id='commentsarea'>";
+			$postcontentdiv .= "<div id='commentsarea' style='margin-left:20px;'>";
 			
 			$comments = $this->curl_download('api.php?format=php&page=getCommentsByPost&token=' . $_SESSION["logintoken"]	 . '&ipadress=' . $_SERVER['REMOTE_ADDR'] . '&postid=' . $posts['posts'][$i]['id']);
 			$comments = unserialize($comments);
 			$j = 0;
 			while(isset($comments['comments'][$j])) {
-				$postcontentdiv .= "<div id='comment' style='margin-left:20px;'>";
+				$postcontentdiv .= "<div id='comment'>";
 				$postcontentdiv .= "<span style='display:none';>" .$comments['comments'][$j]['commentid'] . ": </span><a href='?view=profile&username=" . $comments['comments'][$j]['username'] . "'>" . $comments['comments'][$j]['vorname'] . " " . $comments['comments'][$j]['nachname'] . "</a> um " . $comments['comments'][$j]['date'] . ":<br />" . $comments['comments'][$j]['comment'];
 
 				$postcontentdiv .= "</div>\n";
