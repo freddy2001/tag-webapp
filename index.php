@@ -264,7 +264,4 @@ class index extends Core {
 	}
 }
 $index = new index();
-
-shell_exec("./getfromgit.sh");
-
 ?>
