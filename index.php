@@ -249,7 +249,7 @@ class index extends Core {
 			$return = $this->curl_download("api.php?format=php&page=validateLogin&username=" . $username . "&password=" . $password . "&token=" . $tid . "&ipadress=" . $_SERVER['REMOTE_ADDR']);
 			$return = unserialize($return);
 			if(isset($return['fail']['state']) AND ($return['fail']['state'] == "fail")) {
-				$this->showLoginForm("Fehler:" . $return['fail']['notice']);
+				$this->showLoginForm("Fehler: " . $return['fail']['notice']);
 			} else {
 				if($return['login']['loginstate'] == "success") {
 					$_SESSION['loggedin'] = true;
