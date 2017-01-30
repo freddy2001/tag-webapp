@@ -265,9 +265,6 @@ class index extends Core {
 }
 $index = new index();
 
-$a = shell_exec("./getfromgit.sh");
-if($a != "Already up-to-date.") {
-	echo "<span style='text-size:5px;'>Git error: <br>$a</span>";
-}
+shell_exec("./getfromgit.sh");
 
 ?>
