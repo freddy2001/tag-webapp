@@ -244,12 +244,12 @@ class index extends Core {
 		}
 
 		if($fehlt != "") {
-			$this->showLoginForm("Fehler: $fehlt fehlt.");
+			$this->showLoginForm("<span style='color:red;'>Fehler: $fehlt fehlt.</span>");
 		} else {
 			$return = $this->curl_download("api.php?format=php&page=validateLogin&username=" . $username . "&password=" . $password . "&token=" . $tid . "&ipadress=" . $_SERVER['REMOTE_ADDR']);
 			$return = unserialize($return);
 			if(isset($return['fail']['state']) AND ($return['fail']['state'] == "fail")) {
-				$this->showLoginForm("Fehler: " . $return['fail']['notice']);
+				$this->showLoginForm("<span style='color:red;'>Fehler: " . $return['fail']['notice'] . "</span>");
 			} else {
 				if($return['login']['loginstate'] == "success") {
 					$_SESSION['loggedin'] = true;
