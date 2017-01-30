@@ -52,12 +52,12 @@ class index extends Core {
 
 		if(!isset($_SESSION['loggedin'])) {
 			if(!isset($_POST['action']) AND (!isset($_GET['action']))) {
-				$this->showLoginForm();
+				$this->showLoginForm("");
 			}
 		}
 
 		if(isset($_POST['action']) AND ($_POST['action'] == "login")) {
-			echo($this->validateLoginForm($_POST['loginname'], $_POST['loginpassword'], $_POST['token']));
+			$this->validateLoginForm($_POST['loginname'], $_POST['loginpassword'], $_POST['token']);
 		}
 
 		if(isset($_GET['action'])) {
@@ -223,13 +223,13 @@ class index extends Core {
 		$this->gebeSeiteAus($page, $template);
 	}
 
-	public function showLoginForm() {
+	public function showLoginForm($fehlermeldung) {
 		$page = "login";
 		$pagetitle = "Anmelden";
 		$token = $this->curl_download('api.php?format=php&page=getLoginToken&ipadress=' . $_SERVER['REMOTE_ADDR']) ;
 		$token = unserialize($token);
 		$token = $token['token']['token'];
-		$template = array("old" => array("{pagetitle}","{token}"), "new" => array("$pagetitle", "$token"));
+		$template = array("old" => array("{pagetitle}","{token}", "{fehlermeldung}"), "new" => array("$pagetitle", "$token", "$fehlermeldung"));
 		$this->gebeSeiteAus($page, $template);
 	}
 
@@ -244,12 +244,12 @@ class index extends Core {
 		}
 
 		if($fehlt != "") {
-			return "Fehler: $fehlt fehlt.";
+			$this->showLoginForm("Fehler: $fehlt fehlt.");
 		} else {
 			$return = $this->curl_download("api.php?format=php&page=validateLogin&username=" . $username . "&password=" . $password . "&token=" . $tid . "&ipadress=" . $_SERVER['REMOTE_ADDR']);
 			$return = unserialize($return);
 			if(isset($return['fail']['state']) AND ($return['fail']['state'] == "fail")) {
-				return "Fehler:" . $return['fail']['notice'];
+				$this->showLoginForm("Fehler:" . $return['fail']['notice']);
 			} else {
 				if($return['login']['loginstate'] == "success") {
 					$_SESSION['loggedin'] = true;
