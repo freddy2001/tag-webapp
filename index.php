@@ -156,7 +156,7 @@ class index extends Core {
 			$comments = unserialize($comments);
 			$j = 0;
 			while(isset($comments['comments'][$j])) {
-				$postcontentdiv .= "<div id='comment'>";
+				$postcontentdiv .= "<div id='comment' style='margin-left:20px;'>";
 				$postcontentdiv .= "<span style='display:none';>" .$comments['comments'][$j]['commentid'] . ": </span><a href='?view=profile&username=" . $comments['comments'][$j]['username'] . "'>" . $comments['comments'][$j]['vorname'] . " " . $comments['comments'][$j]['nachname'] . "</a> um " . $comments['comments'][$j]['date'] . ":<br />" . $comments['comments'][$j]['comment'];
 
 				$postcontentdiv .= "</div>\n";
