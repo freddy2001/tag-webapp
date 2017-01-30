@@ -1,1 +1,1 @@
-Du bist nun ausgeloggt. Danke fürs Vorbeischauen 
+Du bist nun ausgeloggt. Danke fürs Vorbeischauen Du bist nun ausgeloggt. Danke fürs Vorbeischauen! <br>
