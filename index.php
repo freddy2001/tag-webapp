@@ -265,5 +265,5 @@ class index extends Core {
 }
 $index = new index();
 
-shell_exec('./getfromgit.sh');
+echo shell_exec("cd /var/www/test_html/tag-webapp && /usr/bin/git pull 2>&1");
 ?>
